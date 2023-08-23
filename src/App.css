@@ -1,0 +1,219 @@
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--mono);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  color: var(--magenta);
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 23, 228, 1) 0%,
+    rgba(134, 251, 251, 1) 100%
+  );
+  height: 2px;
+}
+a:hover {
+  color: var(--hotmag);
+  text-decoration: none;
+}
+/* intro styles */
+#intro {
+  padding: 4rem 1rem 10rem 6rem;
+  width: 60vw;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--mono);
+  font-size: 1rem;
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--aqua);
+  display: block;
+  font-weight: 300;
+}
+
+.highlight span {
+  color: var(--hotmag);
+}
+
+/* ----------------------------------------------- */
+#contact {
+  width: 400px;
+  background-color: var(--plum);
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.section_plum {
+  background-color: var(--plum);
+}
+
+#contact p:last-child {
+  margin-top: 2rem;
+}
+
+.email {
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--magenta);
+  color: var(--white);
+}
+
+.email:hover {
+  background-color: var(--hotmag);
+  color: var(--white);
+}
+
+nav[class*="fa-"] {
+  font-size: 150%;
+  color: var(--aqua);
+}
+.navbar {
+  font-family: var(--mono);
+}
+
+.navbar > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar > ul > li > a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar > ul > li > h1 > a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar > ul > li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.navbar a:hover {
+  color: var(--hotmag);
+}
+
+nav [class*="fa-"] {
+  color: var(--aqua);
+  font-size: 150%;
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+}
+
+nav a [class*="fa-"]:hover {
+  color: var(--hotmag);
+}
+.button {
+  background-color: var(--magenta);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.navbar .button:hover {
+  color: var(--white);
+  background-color: var(--hotmag);
+}
+
+/* Responsive Design */
+
+@media (min-width: 850px) {
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .navbar > ul > li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: 20rem;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#footer > ul {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  list-style-type: none;
+}
+
+#footer > ul > li {
+  margin: 1rem 0;
+}
+
+#footer > ul > li:first-child {
+  font-size: 120%;
+  font-family: var(--sans);
+}
+
+#middle {
+  font-size: 180%;
+  padding: 2rem 0;
+}
+
+/* Project */
+.section-dkblue{
+    background-color: var(--dkblue);
+    
+    padding: 4rem 2rem;
+}
+  .section-dkblue ul{
+    margin: 0;
+  }
+
